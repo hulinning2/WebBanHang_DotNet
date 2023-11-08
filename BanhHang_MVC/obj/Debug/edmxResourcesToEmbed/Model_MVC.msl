@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="WebBanHangModelStoreContainer" CdmEntityContainer="WebBanHangEntities_1">
+    <EntitySetMapping Name="Acc">
+      <EntityTypeMapping TypeName="WebBanHangModel.Acc">
+        <MappingFragment StoreEntitySet="Acc">
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="pass" ColumnName="pass" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DanhMucSanPham">
+      <EntityTypeMapping TypeName="WebBanHangModel.DanhMucSanPham">
+        <MappingFragment StoreEntitySet="DanhMucSanPham">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="ten" ColumnName="ten" />
+          <ScalarProperty Name="madm" ColumnName="madm" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DanhSachSanPham">
+      <EntityTypeMapping TypeName="WebBanHangModel.DanhSachSanPham">
+        <MappingFragment StoreEntitySet="DanhSachSanPham">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="ten" ColumnName="ten" />
+          <ScalarProperty Name="hinhanh" ColumnName="hinhanh" />
+          <ScalarProperty Name="dongia" ColumnName="dongia" />
+          <ScalarProperty Name="madm" ColumnName="madm" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="DeleteProduct" FunctionName="WebBanHangModel.Store.DeleteProduct" />
+    <FunctionImportMapping FunctionImportName="InsertProduct" FunctionName="WebBanHangModel.Store.InsertProduct" />
+    <FunctionImportMapping FunctionImportName="UpdateProduct" FunctionName="WebBanHangModel.Store.UpdateProduct" />
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,416 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{96730B18-6D55-45C6-ACF6-6B26BE3084F8}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BanHang</RootNamespace>
+    <AssemblyName>BanHang</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44312</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Admin\GUI\images\addtocart.gif" />
+    <Content Include="Admin\GUI\images\bann1.jpg" />
+    <Content Include="Admin\GUI\images\bann2.jpg" />
+    <Content Include="Admin\GUI\images\bar_bg.gif" />
+    <Content Include="Admin\GUI\images\bg.jpg" />
+    <Content Include="Admin\GUI\images\big_pic.jpg" />
+    <Content Include="Admin\GUI\images\blue-add.png" />
+    <Content Include="Admin\GUI\images\camera.png" />
+    <Content Include="Admin\GUI\images\car.png" />
+    <Content Include="Admin\GUI\images\cart.gif" />
+    <Content Include="Admin\GUI\images\cart_bg.gif" />
+    <Content Include="Admin\GUI\images\checked.png" />
+    <Content Include="Admin\GUI\images\compare.gif" />
+    <Content Include="Admin\GUI\images\contact-new.png" />
+    <Content Include="Admin\GUI\images\contact_bt.gif" />
+    <Content Include="Admin\GUI\images\csscreme.jpg" />
+    <Content Include="Admin\GUI\images\de.gif" />
+    <Content Include="Admin\GUI\images\details_box_bottom.gif" />
+    <Content Include="Admin\GUI\images\details_box_center.gif" />
+    <Content Include="Admin\GUI\images\details_box_top.gif" />
+    <Content Include="Admin\GUI\images\details_bt_bg.gif" />
+    <Content Include="Admin\GUI\images\details_bt_bg.png" />
+    <Content Include="Admin\GUI\images\dienthoai.jpg" />
+    <Content Include="Admin\GUI\images\en.gif" />
+    <Content Include="Admin\GUI\images\favorites.gif" />
+    <Content Include="Admin\GUI\images\favorites.png" />
+    <Content Include="Admin\GUI\images\favs.gif" />
+    <Content Include="Admin\GUI\images\favs.png" />
+    <Content Include="Admin\GUI\images\footer_bg.gif" />
+    <Content Include="Admin\GUI\images\footer_logo.png" />
+    <Content Include="Admin\GUI\images\header_bg.jpg" />
+    <Content Include="Admin\GUI\images\header_divider.png" />
+    <Content Include="Admin\GUI\images\home.png" />
+    <Content Include="Admin\GUI\images\iphone.png" />
+    <Content Include="Admin\GUI\images\laptop.gif" />
+    <Content Include="Admin\GUI\images\laptop.png" />
+    <Content Include="Admin\GUI\images\logo.png" />
+    <Content Include="Admin\GUI\images\menu_bg.gif" />
+    <Content Include="Admin\GUI\images\menu_divider.gif" />
+    <Content Include="Admin\GUI\images\menu_left.gif" />
+    <Content Include="Admin\GUI\images\menu_right.gif" />
+    <Content Include="Admin\GUI\images\menu_title_bg.gif" />
+    <Content Include="Admin\GUI\images\navbullet.png" />
+    <Content Include="Admin\GUI\images\p1.gif" />
+    <Content Include="Admin\GUI\images\p2.gif" />
+    <Content Include="Admin\GUI\images\p4.gif" />
+    <Content Include="Admin\GUI\images\p5.gif" />
+    <Content Include="Admin\GUI\images\pag_bg.gif" />
+    <Content Include="Admin\GUI\images\pag_bg.png" />
+    <Content Include="Admin\GUI\images\pag_bg_a.gif" />
+    <Content Include="Admin\GUI\images\pag_bg_a.png" />
+    <Content Include="Admin\GUI\images\payment.gif" />
+    <Content Include="Admin\GUI\images\products_details_bg.gif" />
+    <Content Include="Admin\GUI\images\product_box_bottom.gif" />
+    <Content Include="Admin\GUI\images\product_box_center.gif" />
+    <Content Include="Admin\GUI\images\product_box_top.gif" />
+    <Content Include="Admin\GUI\images\R.png" />
+    <Content Include="Admin\GUI\images\search.gif" />
+    <Content Include="Admin\GUI\images\services.png" />
+    <Content Include="Admin\GUI\images\shoppingcart.png" />
+    <Content Include="Admin\GUI\images\square-blue-add.gif" />
+    <Content Include="Admin\GUI\images\thumb1.gif" />
+    <Content Include="Admin\GUI\images\thumb2.gif" />
+    <Content Include="Admin\GUI\images\top_search_bg.gif" />
+    <Content Include="Admin\GUI\images\user_add.png" />
+    <Content Include="Admin\GUI\WebForm1.aspx" />
+    <Content Include="Admin\GUI\WebForm2.aspx" />
+    <None Include="Connected Services\ServiceReference1\Service.disco" />
+    <None Include="Connected Services\ServiceReference1\configuration91.svcinfo" />
+    <None Include="Connected Services\ServiceReference1\configuration.svcinfo" />
+    <None Include="Connected Services\ServiceReference1\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="CSS\iecss.css" />
+    <Content Include="CSS\style.css" />
+    <Content Include="details.html" />
+    <Content Include="iepngfix.htc" />
+    <Content Include="images\addtocart.gif" />
+    <Content Include="images\bann1.jpg" />
+    <Content Include="images\bann2.jpg" />
+    <Content Include="images\bar_bg.gif" />
+    <Content Include="images\bg.jpg" />
+    <Content Include="images\big_pic.jpg" />
+    <Content Include="images\blue-add.png" />
+    <Content Include="images\camera.png" />
+    <Content Include="images\car.png" />
+    <Content Include="images\cart.gif" />
+    <Content Include="images\cart_bg.gif" />
+    <Content Include="images\checked.png" />
+    <Content Include="images\compare.gif" />
+    <Content Include="images\contact-new.png" />
+    <Content Include="images\contact_bt.gif" />
+    <Content Include="images\csscreme.jpg" />
+    <Content Include="images\de.gif" />
+    <Content Include="images\details_box_bottom.gif" />
+    <Content Include="images\details_box_center.gif" />
+    <Content Include="images\details_box_top.gif" />
+    <Content Include="images\details_bt_bg.gif" />
+    <Content Include="images\details_bt_bg.png" />
+    <Content Include="images\dienthoai.jpg" />
+    <Content Include="images\en.gif" />
+    <Content Include="images\favorites.gif" />
+    <Content Include="images\favorites.png" />
+    <Content Include="images\favs.gif" />
+    <Content Include="images\favs.png" />
+    <Content Include="images\footer_bg.gif" />
+    <Content Include="images\footer_logo.png" />
+    <Content Include="images\header_bg.jpg" />
+    <Content Include="images\header_divider.png" />
+    <Content Include="images\home.png" />
+    <Content Include="images\iphone.png" />
+    <Content Include="images\laptop.gif" />
+    <Content Include="images\laptop.png" />
+    <Content Include="images\logo.png" />
+    <Content Include="images\menu_bg.gif" />
+    <Content Include="images\menu_divider.gif" />
+    <Content Include="images\menu_left.gif" />
+    <Content Include="images\menu_right.gif" />
+    <Content Include="images\menu_title_bg.gif" />
+    <Content Include="images\navbullet.png" />
+    <Content Include="images\p1.gif" />
+    <Content Include="images\p2.gif" />
+    <Content Include="images\p4.gif" />
+    <Content Include="images\p5.gif" />
+    <Content Include="images\pag_bg.gif" />
+    <Content Include="images\pag_bg.png" />
+    <Content Include="images\pag_bg_a.gif" />
+    <Content Include="images\pag_bg_a.png" />
+    <Content Include="images\payment.gif" />
+    <Content Include="images\products_details_bg.gif" />
+    <Content Include="images\product_box_bottom.gif" />
+    <Content Include="images\product_box_center.gif" />
+    <Content Include="images\product_box_top.gif" />
+    <Content Include="images\R.png" />
+    <Content Include="images\search.gif" />
+    <Content Include="images\services.png" />
+    <Content Include="images\shoppingcart.png" />
+    <Content Include="images\square-blue-add.gif" />
+    <Content Include="images\thumb1.gif" />
+    <Content Include="images\thumb2.gif" />
+    <Content Include="images\top_search_bg.gif" />
+    <Content Include="images\user_add.png" />
+    <Content Include="js\boxOver.js" />
+    <Content Include="js\windowopen.js" />
+    <Content Include="Model1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Content>
+    <Content Include="Model1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.cs</LastGenOutput>
+    </Content>
+    <Content Include="Web.config" />
+    <Content Include="WebForm1.aspx" />
+    <Content Include="WebForm2.aspx" />
+    <Content Include="WebForm3.aspx" />
+    <Content Include="WebForm4.aspx" />
+    <Content Include="WebForm5.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Acc.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\PROCESSDATA\Class1.cs" />
+    <Compile Include="Admin\GUI\WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\GUI\WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\GUI\WebForm2.aspx.cs">
+      <DependentUpon>WebForm2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\GUI\WebForm2.aspx.designer.cs">
+      <DependentUpon>WebForm2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\BUSINESSLOGIC\pro.cs" />
+    <Compile Include="App_Code\CART.cs" />
+    <Compile Include="Connected Services\ServiceReference1\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="DanhMucSanPham.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DanhSachSanPham.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm4.aspx.cs">
+      <DependentUpon>WebForm4.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm4.aspx.designer.cs">
+      <DependentUpon>WebForm4.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Code\ITEM.cs" />
+    <Compile Include="Response\Redirect.cs" />
+    <Compile Include="WebForm2.aspx.cs">
+      <DependentUpon>WebForm2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm2.aspx.designer.cs">
+      <DependentUpon>WebForm2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm3.aspx.cs">
+      <DependentUpon>WebForm3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm3.aspx.designer.cs">
+      <DependentUpon>WebForm3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Code\Class1.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Site2.Master.cs">
+      <DependentUpon>Site2.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site2.Master.designer.cs">
+      <DependentUpon>Site2.Master</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm5.aspx.cs">
+      <DependentUpon>WebForm5.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm5.aspx.designer.cs">
+      <DependentUpon>WebForm5.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ServiceReference1\Service.wsdl" />
+    <None Include="Connected Services\ServiceReference1\Service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ServiceReference1\Service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ServiceReference1\Service2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ServiceReference1\Service3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <EntityDeploy Include="Model1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Model1.edmx.diagram">
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Content>
+    <None Include="packages.config" />
+    <Content Include="Site2.Master" />
+    <Content Include="Properties\DataSources\System.Data.DataSet.datasource" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\ServiceReference1\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>57652</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44312/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

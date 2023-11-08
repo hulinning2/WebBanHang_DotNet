@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Service" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:61677/Service.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:61677/Service.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:61677/Service.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://localhost:61677/Service.svc?xsd=xsd3" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IService_getTableProcedurce_InputMessage">
+    <wsdl:part name="parameters" element="tns:getTableProcedurce" />
+  </wsdl:message>
+  <wsdl:message name="IService_getTableProcedurce_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getTableProcedurceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_getTable_InputMessage">
+    <wsdl:part name="parameters" element="tns:getTable" />
+  </wsdl:message>
+  <wsdl:message name="IService_getTable_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getTableResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_ExeCuteSQL_InputMessage">
+    <wsdl:part name="parameters" element="tns:ExeCuteSQL" />
+  </wsdl:message>
+  <wsdl:message name="IService_ExeCuteSQL_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ExeCuteSQLResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_ExeCuteProcedurce_InputMessage">
+    <wsdl:part name="parameters" element="tns:ExeCuteProcedurce" />
+  </wsdl:message>
+  <wsdl:message name="IService_ExeCuteProcedurce_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ExeCuteProcedurceResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IService">
+    <wsdl:operation name="getTableProcedurce">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/getTableProcedurce" message="tns:IService_getTableProcedurce_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/getTableProcedurceResponse" message="tns:IService_getTableProcedurce_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getTable">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/getTable" message="tns:IService_getTable_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/getTableResponse" message="tns:IService_getTable_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ExeCuteSQL">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/ExeCuteSQL" message="tns:IService_ExeCuteSQL_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/ExeCuteSQLResponse" message="tns:IService_ExeCuteSQL_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ExeCuteProcedurce">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/ExeCuteProcedurce" message="tns:IService_ExeCuteProcedurce_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/ExeCuteProcedurceResponse" message="tns:IService_ExeCuteProcedurce_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IService" type="tns:IService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getTableProcedurce">
+      <soap:operation soapAction="http://tempuri.org/IService/getTableProcedurce" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTable">
+      <soap:operation soapAction="http://tempuri.org/IService/getTable" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExeCuteSQL">
+      <soap:operation soapAction="http://tempuri.org/IService/ExeCuteSQL" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExeCuteProcedurce">
+      <soap:operation soapAction="http://tempuri.org/IService/ExeCuteProcedurce" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service">
+    <wsdl:port name="BasicHttpBinding_IService" binding="tns:BasicHttpBinding_IService">
+      <soap:address location="http://localhost:61677/Service.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

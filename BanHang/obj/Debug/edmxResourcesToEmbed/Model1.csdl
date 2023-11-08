@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="WebBanHangModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Acc">
+    <Key>
+      <PropertyRef Name="username" />
+    </Key>
+    <Property Name="username" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="pass" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="DanhMucSanPham">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ten" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="madm" Type="Int32" />
+  </EntityType>
+  <EntityType Name="DanhSachSanPham">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ten" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="hinhanh" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="dongia" Type="Int32" />
+    <Property Name="madm" Type="Int32" />
+  </EntityType>
+  <EntityContainer Name="WebBanHangEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Acc" EntityType="Self.Acc" />
+    <EntitySet Name="DanhMucSanPham" EntityType="Self.DanhMucSanPham" />
+    <EntitySet Name="DanhSachSanPham" EntityType="Self.DanhSachSanPham" />
+    <FunctionImport Name="DeleteProduct">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="InsertProduct">
+      <Parameter Name="ten" Mode="In" Type="String" />
+      <Parameter Name="hinhanh" Mode="In" Type="String" />
+      <Parameter Name="dongia" Mode="In" Type="Decimal" />
+      <Parameter Name="madm" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="UpdateProduct">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+      <Parameter Name="ten" Mode="In" Type="String" />
+      <Parameter Name="hinhanh" Mode="In" Type="String" />
+      <Parameter Name="dongia" Mode="In" Type="Decimal" />
+      <Parameter Name="madm" Mode="In" Type="Int32" />
+    </FunctionImport>
+  </EntityContainer>
+</Schema>
